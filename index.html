@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio de Marcus Vinicius de Paula Mendonça — Software Engineer & Full Stack Developer">
+    <title>Marcus Mendonça — Portfólio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg: #0f172a;
+            --surface: #1e293b;
+            --surface-hover: #334155;
+            --primary: #6366f1;
+            --primary-light: #818cf8;
+            --accent: #06b6d4;
+            --accent-light: #22d3ee;
+            --text: #e2e8f0;
+            --text-muted: #94a3b8;
+            --border: rgba(255,255,255,0.08);
+            --glow-primary: rgba(99,102,241,0.3);
+            --glow-accent: rgba(6,182,212,0.3);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Animated background */
+        .bg-gradient {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            background: 
+                radial-gradient(ellipse 80% 60% at 20% 40%, rgba(99,102,241,0.15), transparent),
+                radial-gradient(ellipse 60% 80% at 80% 60%, rgba(6,182,212,0.1), transparent),
+                radial-gradient(ellipse 50% 50% at 50% 0%, rgba(99,102,241,0.08), transparent);
+        }
+
+        .floating-orb {
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(80px);
+            animation: float 8s ease-in-out infinite;
+            z-index: 0;
+        }
+
+        .orb-1 {
+            width: 400px;
+            height: 400px;
+            background: rgba(99,102,241,0.15);
+            top: -100px;
+            left: -100px;
+            animation-delay: 0s;
+        }
+
+        .orb-2 {
+            width: 350px;
+            height: 350px;
+            background: rgba(6,182,212,0.12);
+            bottom: -80px;
+            right: -80px;
+            animation-delay: -4s;
+        }
+
+        .orb-3 {
+            width: 250px;
+            height: 250px;
+            background: rgba(168,85,247,0.1);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation-delay: -2s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(30px, -20px) scale(1.05); }
+            66% { transform: translate(-20px, 20px) scale(0.95); }
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 2rem;
+            max-width: 900px;
+            width: 100%;
+        }
+
+        .avatar {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-family: 'Outfit', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #fff;
+            box-shadow: 0 0 40px var(--glow-primary);
+            animation: pulse-glow 3s ease-in-out infinite;
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 40px var(--glow-primary); }
+            50% { box-shadow: 0 0 60px var(--glow-primary), 0 0 80px var(--glow-accent); }
+        }
+
+        h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, var(--text), var(--primary-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            font-size: clamp(0.9rem, 2vw, 1.1rem);
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+        }
+
+        .role {
+            font-size: 0.85rem;
+            color: var(--accent-light);
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-bottom: 2.5rem;
+        }
+
+        .choose-label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: rgba(30,41,59,0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 2.5rem 2rem;
+            text-decoration: none;
+            color: var(--text);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 20px;
+            padding: 1px;
+            background: linear-gradient(135deg, transparent, rgba(99,102,241,0.3), transparent);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .card:hover::before {
+            opacity: 1;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            background: rgba(30,41,59,0.8);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3), 0 0 40px var(--glow-primary);
+        }
+
+        .card-bootstrap:hover {
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3), 0 0 40px rgba(111,66,193,0.3);
+        }
+
+        .card-tailwind:hover {
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3), 0 0 40px rgba(6,182,212,0.3);
+        }
+
+        .card-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.2rem;
+            font-size: 1.8rem;
+        }
+
+        .card-bootstrap .card-icon {
+            background: linear-gradient(135deg, rgba(111,66,193,0.2), rgba(111,66,193,0.05));
+            color: #a78bfa;
+        }
+
+        .card-tailwind .card-icon {
+            background: linear-gradient(135deg, rgba(6,182,212,0.2), rgba(6,182,212,0.05));
+            color: var(--accent-light);
+        }
+
+        .card h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .card p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        .card-arrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            margin-top: 1.2rem;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--primary-light);
+            transition: gap 0.3s ease;
+        }
+
+        .card:hover .card-arrow {
+            gap: 0.6rem;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            padding: 1.5rem;
+            z-index: 1;
+        }
+
+        footer p {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        footer a {
+            color: var(--primary-light);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Animations */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeUp 0.8s ease forwards;
+        }
+
+        .fade-up-delay-1 { animation-delay: 0.1s; }
+        .fade-up-delay-2 { animation-delay: 0.2s; }
+        .fade-up-delay-3 { animation-delay: 0.4s; }
+        .fade-up-delay-4 { animation-delay: 0.5s; }
+
+        @keyframes fadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .cards {
+                grid-template-columns: 1fr;
+                max-width: 360px;
+            }
+
+            .card {
+                padding: 2rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-gradient"></div>
+    <div class="floating-orb orb-1"></div>
+    <div class="floating-orb orb-2"></div>
+    <div class="floating-orb orb-3"></div>
+
+    <div class="container">
+        <div class="avatar fade-up fade-up-delay-1">MV</div>
+        <h1 class="fade-up fade-up-delay-1">Marcus Mendonça</h1>
+        <p class="subtitle fade-up fade-up-delay-2">Software Engineer &amp; Full Stack Developer</p>
+        <p class="role fade-up fade-up-delay-2">Laravel · Vue.js · JavaScript · PHP · Python</p>
+
+        <p class="choose-label fade-up fade-up-delay-3">Escolha uma versão do portfólio</p>
+
+        <div class="cards">
+            <a href="bootstrap/index.html" class="card card-bootstrap fade-up fade-up-delay-3" id="card-bootstrap">
+                <div class="card-icon">
+                    <svg width="30" height="30" viewBox="0 0 256 256" fill="none">
+                        <path d="M0 222.991C0 241.223 14.779 256 33.009 256H222.991C241.223 256 256 241.221 256 222.991V33.009C256 14.777 241.221 0 222.991 0H33.009C14.777 0 0 14.779 0 33.009V222.991Z" fill="url(#bs-grad)"/>
+                        <path d="M106.158 113.238V76.985H138.907C142.07 76.985 145.143 77.253 148.027 77.789C150.911 78.324 153.437 79.261 155.604 80.6C157.771 81.939 159.49 83.77 160.762 86.093C162.034 88.416 162.67 91.375 162.67 94.97C162.67 101.893 160.628 106.822 156.543 109.757C152.458 112.693 147.345 113.238 141.205 113.238H106.158ZM72.075 50.5V205.5H143.263C148.564 205.5 154.045 205.053 159.706 204.159C165.367 203.265 170.659 201.479 175.583 198.8C180.507 196.121 184.592 192.303 187.835 187.345C191.079 182.388 192.701 175.957 192.701 168.054C192.701 157.86 189.995 149.778 184.582 143.808C179.17 137.839 171.825 134.201 162.547 132.894V132.37C169.982 130.181 175.762 126.408 179.886 121.052C184.011 115.696 186.073 108.911 186.073 100.699C186.073 93.33 184.836 87.293 182.36 82.589C179.884 77.884 176.461 74.179 172.09 71.473C167.719 68.767 162.592 66.883 156.71 65.821C150.827 64.76 144.548 64.229 137.867 64.229L72.075 50.5ZM106.158 179.015V136.236H141.987C149.175 136.236 154.967 138.069 159.363 141.734C163.759 145.399 165.957 151.236 165.957 159.244C165.957 163.374 165.248 166.81 163.831 169.551C162.413 172.293 160.516 174.474 158.139 176.095C155.763 177.716 153.006 178.854 149.869 179.508C146.733 180.163 143.434 179.015 140.068 179.015H106.158Z" fill="white"/>
+                        <defs><linearGradient id="bs-grad" x1="0" y1="256" x2="256" y2="0"><stop stop-color="#7B2FF7"/><stop offset="1" stop-color="#A855F7"/></linearGradient></defs>
+                    </svg>
+                </div>
+                <h2>Bootstrap</h2>
+                <p>Versão desenvolvida com Bootstrap 5.3 — framework CSS mais popular do mundo</p>
+                <span class="card-arrow">Acessar <span>→</span></span>
+            </a>
+
+            <a href="tailwind/index.html" class="card card-tailwind fade-up fade-up-delay-4" id="card-tailwind">
+                <div class="card-icon">
+                    <svg width="30" height="30" viewBox="0 0 54 33" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M27 0C19.8 0 15.3 3.6 13.5 10.8C16.2 7.2 19.35 5.85 22.95 6.75C25.004 7.263 26.472 8.754 28.097 10.403C30.744 13.09 33.808 16.2 40.5 16.2C47.7 16.2 52.2 12.6 54 5.4C51.3 9 48.15 10.35 44.55 9.45C42.496 8.937 41.028 7.446 39.403 5.797C36.756 3.11 33.692 0 27 0ZM13.5 16.2C6.3 16.2 1.8 19.8 0 27C2.7 23.4 5.85 22.05 9.45 22.95C11.504 23.463 12.972 24.954 14.597 26.603C17.244 29.29 20.308 32.4 27 32.4C34.2 32.4 38.7 28.8 40.5 21.6C37.8 25.2 34.65 26.55 31.05 25.65C28.996 25.137 27.528 23.646 25.903 21.997C23.256 19.31 20.192 16.2 13.5 16.2Z" fill="#22d3ee"/>
+                    </svg>
+                </div>
+                <h2>Tailwind CSS</h2>
+                <p>Versão desenvolvida com Tailwind CSS — framework utility-first moderno e flexível</p>
+                <span class="card-arrow">Acessar <span>→</span></span>
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Marcus Mendonça · GAC116 — Programação Web · <a href="https://github.com/Marcus-Programmer" target="_blank">GitHub</a></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio de Marcus Vinicius de Paula Mendonça — Software Engineer & Full Stack Developer. Versão Bootstrap.">
+    <title>Marcus Mendonça — Portfólio (Bootstrap)</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ========== NAVBAR ========== -->
+    <nav class="navbar navbar-expand-lg fixed-top glass-nav" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#hero">
+                <span class="brand-gradient">MV</span> Marcus
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto me-3 gap-1">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sobre">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#experiencia">Experiência</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#formacao">Formação</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projetos">Projetos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contato">Contato</a>
+                    </li>
+                </ul>
+                <button class="btn btn-theme-toggle" id="themeToggle" aria-label="Alternar tema">
+                    <i class="bi bi-moon-fill" id="themeIcon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== HERO ========== -->
+    <section class="hero-section d-flex align-items-center" id="hero">
+        <div class="hero-bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+        <div class="container position-relative">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <div class="hero-avatar mx-auto mb-4 animate-on-scroll">
+                        <span>MV</span>
+                    </div>
+                    <p class="hero-greeting animate-on-scroll">Olá, eu sou</p>
+                    <h1 class="hero-title animate-on-scroll">Marcus Mendonça</h1>
+                    <p class="hero-subtitle animate-on-scroll">Software Engineer &amp; Full Stack Developer</p>
+                    <p class="hero-bio animate-on-scroll">
+                        Tenho 21 anos, programo desde 2019. Apaixonado por <strong>programação web</strong> e <strong>ciência de dados</strong>. 
+                        Experiência sólida com Laravel, Vue.js e tecnologias modernas, atuando em projetos nacionais e internacionais.
+                    </p>
+                    <div class="hero-buttons animate-on-scroll">
+                        <a href="#projetos" class="btn btn-primary-custom btn-lg me-2">
+                            <i class="bi bi-code-slash me-1"></i> Ver Projetos
+                        </a>
+                        <a href="#contato" class="btn btn-outline-custom btn-lg">
+                            <i class="bi bi-send me-1"></i> Contato
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SOBRE ========== -->
+    <section class="section-padding" id="sobre">
+        <div class="container">
+            <div class="text-center mb-5">
+                <p class="section-tag animate-on-scroll">Conheça-me</p>
+                <h2 class="section-title animate-on-scroll">Sobre Mim</h2>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="glass-card p-4 p-md-5 animate-on-scroll">
+                        <p class="about-text mb-4">
+                            Sou <strong>Software Engineer</strong> com experiência sólida no desenvolvimento de aplicações web full stack, 
+                            utilizando <strong>Laravel</strong> no back-end e <strong>Vue.js</strong> no front-end. Atuo em todas as etapas do ciclo 
+                            de desenvolvimento de software, desde a concepção até o deploy.
+                        </p>
+                        <p class="about-text mb-4">
+                            Tive a oportunidade de trabalhar como Software Engineer em uma empresa em <strong>Portugal</strong> (Inovcorp), 
+                            colaborando com times multiculturais e seguindo padrões profissionais de qualidade, versionamento e arquitetura de software.
+                        </p>
+                        <p class="about-text mb-0">
+                            Atualmente cursando <strong>Sistemas de Informação na UFLA</strong>, busco constantemente evoluir e contribuir 
+                            para soluções escaláveis, seguras e alinhadas às boas práticas de engenharia de software.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4 g-3 justify-content-center">
+                <div class="col-md-4 col-lg-3">
+                    <div class="glass-card stat-card text-center p-4 animate-on-scroll">
+                        <div class="stat-icon"><i class="bi bi-code-square"></i></div>
+                        <h3 class="stat-number">+7</h3>
+                        <p class="stat-label">Anos Programando</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-3">
+                    <div class="glass-card stat-card text-center p-4 animate-on-scroll">
+                        <div class="stat-icon"><i class="bi bi-globe2"></i></div>
+                        <h3 class="stat-number">2</h3>
+                        <p class="stat-label">Países</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-3">
+                    <div class="glass-card stat-card text-center p-4 animate-on-scroll">
+                        <div class="stat-icon"><i class="bi bi-briefcase"></i></div>
+                        <h3 class="stat-number">+3</h3>
+                        <p class="stat-label">Anos de Experiência</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== EXPERIÊNCIA ========== -->
+    <section class="section-padding section-alt" id="experiencia">
+        <div class="container">
+            <div class="text-center mb-5">
+                <p class="section-tag animate-on-scroll">Trajetória</p>
+                <h2 class="section-title animate-on-scroll">Experiência Profissional</h2>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="timeline">
+                        <div class="timeline-item animate-on-scroll">
+                            <div class="timeline-marker"></div>
+                            <div class="glass-card timeline-content p-4">
+                                <div class="d-flex justify-content-between align-items-start flex-wrap mb-2">
+                                    <div>
+                                        <h3 class="timeline-title">Software Engineer</h3>
+                                        <p class="timeline-company"><i class="bi bi-building me-1"></i>Inovcorp</p>
+                                    </div>
+                                    <span class="badge bg-primary-custom">Set — Dez 2025</span>
+                                </div>
+                                <p class="timeline-location"><i class="bi bi-geo-alt me-1"></i>Portugal (Remoto)</p>
+                                <p class="timeline-desc">
+                                    Desenvolvimento e manutenção de sistemas web utilizando <strong>Laravel</strong> e <strong>Vue.js</strong>, 
+                                    incluindo implementação de novas funcionalidades, correção de bugs, integração com APIs e 
+                                    otimização de desempenho em ambiente ágil.
+                                </p>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <span class="tech-badge">Laravel</span>
+                                    <span class="tech-badge">Vue.js</span>
+                                    <span class="tech-badge">PHP</span>
+                                    <span class="tech-badge">JavaScript</span>
+                                    <span class="tech-badge">APIs REST</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item animate-on-scroll">
+                            <div class="timeline-marker"></div>
+                            <div class="glass-card timeline-content p-4">
+                                <div class="d-flex justify-content-between align-items-start flex-wrap mb-2">
+                                    <div>
+                                        <h3 class="timeline-title">Desenvolvedor de Software</h3>
+                                        <p class="timeline-company"><i class="bi bi-building me-1"></i>Gafit Soluções</p>
+                                    </div>
+                                    <span class="badge bg-primary-custom">2022 — Set 2025</span>
+                                </div>
+                                <p class="timeline-location"><i class="bi bi-geo-alt me-1"></i>Brasil</p>
+                                <p class="timeline-desc">
+                                    Desenvolvimento de aplicações web e mobile com foco em <strong>Laravel</strong>, criação e manutenção de APIs, 
+                                    integração com banco de dados MySQL, implementação de regras de negócio e suporte ao front-end.
+                                </p>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <span class="tech-badge">Laravel</span>
+                                    <span class="tech-badge">PHP</span>
+                                    <span class="tech-badge">MySQL</span>
+                                    <span class="tech-badge">APIs REST</span>
+                                    <span class="tech-badge">Docker</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FORMAÇÃO ========== -->
+    <section class="section-padding" id="formacao">
+        <div class="container">
+            <div class="text-center mb-5">
+                <p class="section-tag animate-on-scroll">Educação</p>
+                <h2 class="section-title animate-on-scroll">Formação Acadêmica</h2>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-6 col-lg-5">
+                    <div class="glass-card education-card p-4 h-100 animate-on-scroll">
+                        <div class="education-icon mb-3">
+                            <i class="bi bi-mortarboard"></i>
+                        </div>
+                        <h3 class="education-degree">Bacharelado em Sistemas de Informação</h3>
+                        <p class="education-school"><i class="bi bi-bank me-1"></i>Universidade Federal de Lavras (UFLA)</p>
+                        <span class="badge bg-accent-custom">2022 — 2026 (em andamento)</span>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-5">
+                    <div class="glass-card education-card p-4 h-100 animate-on-scroll">
+                        <div class="education-icon mb-3">
+                            <i class="bi bi-award"></i>
+                        </div>
+                        <h3 class="education-degree">Técnico em Informática</h3>
+                        <p class="education-school"><i class="bi bi-bank me-1"></i>CEFET-MG — Unidade Varginha</p>
+                        <span class="badge bg-accent-custom">2019 — 2021</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SKILLS ========== -->
+    <section class="section-padding section-alt" id="skills">
+        <div class="container">
+            <div class="text-center mb-5">
+                <p class="section-tag animate-on-scroll">Competências</p>
+                <h2 class="section-title animate-on-scroll">Skills & Tecnologias</h2>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+                <!-- Backend -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="glass-card skill-group p-4 h-100 animate-on-scroll">
+                        <div class="skill-group-icon"><i class="bi bi-server"></i></div>
+                        <h3 class="skill-group-title">Back-end</h3>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="skill-badge">Laravel</span>
+                            <span class="skill-badge">PHP</span>
+                            <span class="skill-badge">Node.js</span>
+                            <span class="skill-badge">Python</span>
+                            <span class="skill-badge">Java</span>
+                            <span class="skill-badge">C++</span>
+                            <span class="skill-badge">APIs REST</span>
+                            <span class="skill-badge">MySQL</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Frontend -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="glass-card skill-group p-4 h-100 animate-on-scroll">
+                        <div class="skill-group-icon"><i class="bi bi-palette"></i></div>
+                        <h3 class="skill-group-title">Front-end</h3>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="skill-badge">Vue.js</span>
+                            <span class="skill-badge">React</span>
+                            <span class="skill-badge">React Native</span>
+                            <span class="skill-badge">JavaScript</span>
+                            <span class="skill-badge">TypeScript</span>
+                            <span class="skill-badge">HTML</span>
+                            <span class="skill-badge">CSS</span>
+                            <span class="skill-badge">Tailwind</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tools -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="glass-card skill-group p-4 h-100 animate-on-scroll">
+                        <div class="skill-group-icon"><i class="bi bi-tools"></i></div>
+                        <h3 class="skill-group-title">Ferramentas</h3>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="skill-badge">Git</span>
+                            <span class="skill-badge">Docker</span>
+                            <span class="skill-badge">Linux</span>
+                            <span class="skill-badge">MySQL</span>
+                            <span class="skill-badge">VS Code</span>
+                            <span class="skill-badge">Figma</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Languages -->
+            <div class="row mt-4 g-3 justify-content-center">
+                <div class="col-md-4 col-lg-3">
+                    <div class="glass-card text-center p-3 animate-on-scroll">
+                        <h4 class="lang-title">Português</h4>
+                        <p class="lang-level">Nativo</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-3">
+                    <div class="glass-card text-center p-3 animate-on-scroll">
+                        <h4 class="lang-title">Inglês</h4>
+                        <p class="lang-level">Avançado</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== PROJETOS ========== -->
+    <section class="section-padding" id="projetos">
+        <div class="container">
+            <div class="text-center mb-5">
+                <p class="section-tag animate-on-scroll">Trabalhos</p>
+                <h2 class="section-title animate-on-scroll">Projetos</h2>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <!-- Projeto 1 -->
+                <div class="col-md-6 col-lg-5">
+                    <div class="glass-card project-card p-4 h-100 animate-on-scroll">
+                        <div class="project-header mb-3">
+                            <div class="project-icon"><i class="bi bi-kanban"></i></div>
+                            <div class="project-links">
+                                <a href="https://github.com/Marcus-Programmer/Task-manager" target="_blank" class="project-link" aria-label="GitHub">
+                                    <i class="bi bi-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">TaskManager</h3>
+                        <p class="project-desc">
+                            Sistema completo de gerenciamento de tarefas com autenticação, CRUD e interface moderna. 
+                            Desenvolvido com arquitetura Repository Pattern.
+                        </p>
+                        <div class="d-flex flex-wrap gap-2 mt-auto">
+                            <span class="tech-badge">Laravel 12</span>
+                            <span class="tech-badge">Vue 3</span>
+                            <span class="tech-badge">TypeScript</span>
+                            <span class="tech-badge">Inertia.js</span>
+                            <span class="tech-badge">MySQL</span>
+                            <span class="tech-badge">Docker</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Projeto 2 -->
+                <div class="col-md-6 col-lg-5">
+                    <div class="glass-card project-card p-4 h-100 animate-on-scroll">
+                        <div class="project-header mb-3">
+                            <div class="project-icon"><i class="bi bi-controller"></i></div>
+                            <div class="project-links">
+                                <a href="https://github.com/Marcus-Programmer/Jogo-da-memoria" target="_blank" class="project-link" aria-label="GitHub">
+                                    <i class="bi bi-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">Memory Cosmos</h3>
+                        <p class="project-desc">
+                            Jogo da memória com tema espacial desenvolvido para a disciplina GAC116 — Programação Web. 
+                            Desenvolvido com HTML, CSS e JavaScript puro.
+                        </p>
+                        <div class="d-flex flex-wrap gap-2 mt-auto">
+                            <span class="tech-badge">HTML</span>
+                            <span class="tech-badge">CSS</span>
+                            <span class="tech-badge">JavaScript</span>
+                            <span class="tech-badge">GitHub Pages</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CONTATO ========== -->
+    <section class="section-padding section-alt" id="contato">
+        <div class="container">
+            <div class="text-center mb-5">
+                <p class="section-tag animate-on-scroll">Fale comigo</p>
+                <h2 class="section-title animate-on-scroll">Contato</h2>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-5">
+                    <div class="glass-card p-4 p-md-5 h-100 animate-on-scroll">
+                        <h3 class="contact-title mb-4">Vamos conversar!</h3>
+                        <p class="contact-text mb-4">
+                            Estou aberto a novas oportunidades, colaborações e projetos. 
+                            Fique à vontade para entrar em contato!
+                        </p>
+                        <div class="contact-links">
+                            <a href="mailto:marcusvi04@hotmail.com" class="contact-item">
+                                <div class="contact-item-icon"><i class="bi bi-envelope"></i></div>
+                                <div>
+                                    <p class="contact-item-label">Email</p>
+                                    <p class="contact-item-value">marcusvi04@hotmail.com</p>
+                                </div>
+                            </a>
+                            <a href="https://wa.me/5535988423188" target="_blank" class="contact-item">
+                                <div class="contact-item-icon"><i class="bi bi-whatsapp"></i></div>
+                                <div>
+                                    <p class="contact-item-label">WhatsApp</p>
+                                    <p class="contact-item-value">+55 35 98842-3188</p>
+                                </div>
+                            </a>
+                            <a href="https://linkedin.com/in/marcus-mendonça-b3897b263" target="_blank" class="contact-item">
+                                <div class="contact-item-icon"><i class="bi bi-linkedin"></i></div>
+                                <div>
+                                    <p class="contact-item-label">LinkedIn</p>
+                                    <p class="contact-item-value">Marcus Mendonça</p>
+                                </div>
+                            </a>
+                            <a href="https://github.com/Marcus-Programmer" target="_blank" class="contact-item">
+                                <div class="contact-item-icon"><i class="bi bi-github"></i></div>
+                                <div>
+                                    <p class="contact-item-label">GitHub</p>
+                                    <p class="contact-item-value">Marcus-Programmer</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="glass-card p-4 p-md-5 h-100 animate-on-scroll">
+                        <h3 class="contact-title mb-4">Envie uma mensagem</h3>
+                        <form id="contactForm" onsubmit="return handleFormSubmit(event)">
+                            <div class="mb-3">
+                                <label for="inputName" class="form-label">Nome</label>
+                                <input type="text" class="form-control custom-input" id="inputName" placeholder="Seu nome" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="inputEmail" class="form-label">Email</label>
+                                <input type="email" class="form-control custom-input" id="inputEmail" placeholder="seu@email.com" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="inputMessage" class="form-label">Mensagem</label>
+                                <textarea class="form-control custom-input" id="inputMessage" rows="4" placeholder="Sua mensagem..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary-custom w-100" id="btnSubmit">
+                                <i class="bi bi-send me-1"></i> Enviar Mensagem
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
+                    <span class="footer-brand"><span class="brand-gradient">MV</span> Marcus Mendonça</span>
+                </div>
+                <div class="col-md-4 text-center mb-3 mb-md-0">
+                    <div class="footer-socials">
+                        <a href="https://github.com/Marcus-Programmer" target="_blank" aria-label="GitHub"><i class="bi bi-github"></i></a>
+                        <a href="https://linkedin.com/in/marcus-mendonça-b3897b263" target="_blank" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a href="mailto:marcusvi04@hotmail.com" aria-label="Email"><i class="bi bi-envelope"></i></a>
+                        <a href="https://wa.me/5535988423188" target="_blank" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center text-md-end">
+                    <p class="footer-copy">&copy; 2026 Marcus Mendonça</p>
+                    <a href="../tailwind/index.html" class="footer-version-link">Ver versão Tailwind →</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>
